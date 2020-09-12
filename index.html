@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moviethon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <nav class="container navbar">
+      <div class="row">
+        <div class="col-6">
+          <img
+            id="moviethon-logo"
+            src="assets/imgs/logo.png"
+            alt="moviethon logo"
+          />
+        </div>
+        <div class="col-6 d-flex justify-end align-center">
+          <input type="search" placeholder="Movie Title" class="search-bar" />
+          <!-- <i class="fa fa-search search-button"></i> -->
+        </div>
+      </div>
+    </nav>
+
+    <div id="add-section" class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>-Add movie to watchlist-</h2>
+          <form
+            id="add-form"
+            class="add-section-input d-flex justify-center align-center"
+          >
+            <input type="text" placeholder="Movie title" />
+            <input
+              type="number"
+              placeholder="Released Year"
+              min="4"
+              maxlength="4"
+            />
+            <i class="fa fa-plus-square add-button"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="watchlist-section" class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-center">
+          <h2>-Movies to watch-</h2>
+        </div>
+        <div class="col-12 d-flex justify-center">
+          <table>
+            <thead>
+              <tr>
+                <th>Movie Title</th>
+                <th>Released Year</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody class="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="myModal" class="modal d-none">
+      <div class="modal-content">
+        <h2>Are you sure about that, mate?</h2>
+        <div class="modal-button-wrapper">
+          <button class="modal-button yesButton">Yes</button>
+          <button class="modal-button noButton">No</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal d-none">
+      <div class="modal-content">
+        <h2>you didn't put anything, mate!</h2>
+        <div class="modal-button-wrapper">
+          <button class="modal-button closeButton">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="landscapeNoteModal" class="modal">
+      <div class="modal-content">
+        <h2>Best viewed in landscape mode.</h2>
+      </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
